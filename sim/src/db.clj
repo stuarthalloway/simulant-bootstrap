@@ -17,4 +17,11 @@
 (def sim-uri (str "datomic:mem://" (d/squuid)))
 (def sim-conn (reset-conn sim-uri))
 
-;; (java.util.Date. (d/squuid-time-millis (d/squuid)))
+;; disgusting demo hack
+(defn set-test-uri
+  [uri]
+  (d/create-database uri)
+  (def sim-uri uri)
+  (def sim-conn (d/connect uri)))
+
+

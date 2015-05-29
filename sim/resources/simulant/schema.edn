@@ -208,7 +208,7 @@
     :db/index true
     :db/cardinality :db.cardinality/one
     :db.install/_attribute :db.part/db}   
-   {:db/id #db/id[:db.part/db]
+   {:db/id #db/id[:db.part/user]
     :db/doc "Service that accumulates events during a sim run,
 and then transacts them into the sim database at the
 end of the run."
